@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="article">
+
+	<select id="selectList" parameterType="PageVO" resultType="Article">
+		select a.no , a.title,a.content,a.nickname,a.regdate
+		from(
+		select a.no , a.title , a.content , a.nickname , a.regdate , ROW_NUMBER()
+		OVER( ORDER BY a.no DESC) AS NUM
+		from (select a. no , a.title , a.content , u.nickname , a.regdate
+		from article a , users u
+		where u.no = a.userNo
+		)a
+		)a
+		where a.num between #{start} and #{end}
+	</select>
+
+	<insert id="insertArticle" parameterType="Article">
+		insert into article(no,title,content,userNo,regdate)
+		values(NEXT VALUE FOR article_seq , #{title} ,#{content} , #{userNo} ,getDate());
+	</insert>
+	
+	<delete id="deleteArticle" parameterType="int">
+	delete article
+	where no = #{no}
+	</delete>
+
+	<update id="updateArticle" parameterType="Article">
+		update article
+		set title =#{title} , content = #{content}
+		where no = #{no}
+	</update>
+	
+	<select id="selectOne" resultType="Article" parameterType="int">
+		select a. no , a.title , a.content , u.nickname , a.regdate , u.no userNo
+		from article a , users u
+		where u.no = a.userNo
+		and a.no = #{no}
+	</select>
+</mapper>
+

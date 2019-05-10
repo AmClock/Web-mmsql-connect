@@ -1,0 +1,64 @@
+@charset "UTF-8";
+body * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#wrap {
+    width: 998px;
+    height: 298px;
+    border: 1px solid silver;
+    margin: auto;
+    margin-top: 200px;
+    position: relative;
+}
+
+#logoBox {
+    width: 128px;
+    height: 85px;
+    margin-left: 20px;
+}
+
+#joinBox {
+    top: 90px;
+    left: 170px;
+    position: absolute;
+    width: 700px;
+    height: 250px;
+    text-align: center;
+}
+
+#joinBox form label {
+    width: 700px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+}
+
+label span {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    font-size: 20px;
+}
+
+label input {
+    width: 300px;
+    height: 30px;
+    outline: none;
+}
+
+form button {
+    width: 150px;
+    height: 40px;
+    background-color: #007fff;
+    border: 3px solid #00f;
+    cursor: pointer;
+    font-size: 17px;
+    color: #ffff;
+    transition: .3s ease;
+}
+
+form button:hover {
+    background-color: #00f;
+    font-weight: bold;
+}

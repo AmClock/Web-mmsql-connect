@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+
+	<insert id="insertUser" parameterType="User">
+	insert into users(no,id,pwd,nickname,regdate)
+	values (NEXT VALUE FOR user_seq,#{id},#{pwd},#{nickname},getdate())
+	</insert>
+	
+	<select id="selectOne" resultType="User" parameterType="User">
+	select no , id , pwd , nickname , regdate 
+	from users
+	where id = #{id}
+	and pwd = #{pwd}
+	</select>
+</mapper>
+

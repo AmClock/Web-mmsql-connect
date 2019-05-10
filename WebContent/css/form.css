@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+#titleBox , #contentBox , #contentBtnBox{
+    width: 1000px;
+    margin: auto;
+
+}
+#contentsBox{
+    width: 1200px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid silver;
+}
+#titleBox{
+    height: 50px;
+    position: relative;
+    margin-top: 70px;
+}
+
+#titleBox label span,#titleBox label input{
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+}
+#titleBox label span{
+    left: 5px;
+}
+#titleBox label input{
+    left: 50px;
+    width: 900px;
+    height: 30px;
+}
+
+#contentBox{
+    height: 300px;
+    position: relative;
+}
+#contentBox label span , #contentBox label textarea{
+    position: absolute;
+    top: 10px;
+}
+#contentBox label span{
+    left: 5px;
+    font-size: 20px;
+}
+#contentBox label textarea{
+    resize: none;
+    width: 900px;
+    height: 270px;
+    left: 50px;
+}
+#contentBtnBox{
+    height: 50px;
+    position: relative;
+}
+#contentBtnBox button{
+    width: 150px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background-color: #007fff;
+    border: 3px solid #00f;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    font-size: 17px;
+    transition: .3s ease;
+}
+#contentBtnBox button:hover{
+    background-color: #00f;
+    font-weight: bold;
+}

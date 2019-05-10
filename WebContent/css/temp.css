@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+body * {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+#headWrap {
+	width: 100%;
+	height: 100px;
+}
+
+#logoBox {
+	float: left;
+}
+
+#logoBox img {
+	width: 100px;
+	height: 50px;
+	margin-left: 50px;
+	margin-top: 25px;
+}
+
+#btnBox {
+	float: right;
+	width: 700px;
+	height: 100%;
+	margin-top: 25px;
+}
+
+#btnBox button, input {
+	outline: none;
+}
+
+#loginBox, #joinBox {
+	display: inline-block;
+}
+
+#loginBox form input {
+	width: 180px;
+	height: 25px;
+}
+
+#btnBox button {
+	width: 150px;
+	height: 40px;
+	background-color: #007fff;
+	color: #ffff;
+	border: 3px solid #00f;
+	font-size: 17px;
+	cursor: pointer;
+	transition: .3s ease;
+}
+
+#btnBox button:hover {
+	font-weight: bold;
+	background-color: #00f;
+}
+
+#writeBox {
+	width: 100%;
+	height: 50px;
+	position: relative;
+}
+
+#writeBox button:hover {
+	background-color: #9c9c9c;
+	font-weight: bold;
+}
+
+#writeBtnBox {
+	position: absolute;
+	right: 0;
+}
+
+#writeBox button {
+	width: 150px;
+	height: 40px;
+	background-color: #c9c9c9;
+	border: 3px solid #9c9c9c;
+	mso-font-width: 17px;
+	color: #ffff;
+	cursor: pointer;
+	transition: .3s ease;
+}
+
+#loginProfile {
+	width: 200px;
+	height: 30px;
+	display: inline-block;
+	font-size: 20px;
+}
